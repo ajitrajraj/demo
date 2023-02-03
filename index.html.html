@@ -1,0 +1,72 @@
+<!DOCTYPE Html>
+<Html>
+
+<Head>
+    <Meta Http-Equiv="Content-Type" Content="Text/Html; Charset=Utf-8" />
+    <Meta Name="" Content="">
+    <Title>Heart</Title>
+    <Link Rel="Stylesheet" Href="Style.Css">
+</Head>
+	<style>
+		Body {
+    Margin: 0;
+    Padding: 0;
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Min-Height: 92vh;
+    Background: Black;
+}
+
+.Heart {
+    Height: 100px;
+    Width: 100px;
+    Background: Red;
+    Position: Relative;
+    Transform: Rotate(-45deg);
+    Box-Shadow: -10px 10px 90px Red;
+    Animation: Heart 0.6s Linear Infinite;
+}
+
+@Keyframes Heart {
+    0% {
+        Transform: Rotate(-45deg) Scale(1.00);
+    }
+    80% {
+        Transform: Rotate(-45deg) Scale(0.90);
+    }
+    100% {
+        Transform: Rotate(-45deg) Scale(0.80);
+    }
+}
+
+.Heart::Before {
+    Content: "";
+    Position: Absolute;
+    Height: 100px;
+    Width: 100px;
+    Background: Red;
+    Top: -55%;
+    Border-Radius: 50px;
+    Box-Shadow: -10px 10px 90px Red;
+}
+
+.Heart::After {
+    Content: "";
+    Position: Absolute;
+    Height: 100px;
+    Width: 100px;
+    Background: Red;
+    Right: -55%;
+    Border-Radius: 50px;
+    Box-Shadow: -10px 10px 90px Red;
+}
+	</style>
+<Body>
+    <Div Class="Heart">Your Heart</Div>
+	<script>
+		
+	</script>
+</Body>
+
+</Html>
